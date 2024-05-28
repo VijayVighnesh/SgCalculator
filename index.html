@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>CGPA CALCULATOR</h1>
+
+    <div class="course-div">
+      <h2 class="headder">Calculate your own sgpa&cgpa..</h2>
+      <h2>
+        <label for="course" id="course-code">Course Name:- </label>
+        <label for="course-credits" id="course-unit">Course credits:- </label>
+        <label for="course-grade" id="course-grade">Course grade:- </label>
+      </h2>
+      <div class="course-div1">
+        <form class="get-0">
+          <input
+            type="text"
+            placeholder="Enter course Name"
+            class="course"
+            required
+          />
+          <input
+            type="int"
+            placeholder="Enter course Credits"
+            class="course-credits"
+            required
+          />
+          <select class="grade get" required>
+            <option value="select" class="grade">Select</option>
+            <option value="select" class="grade">S</option>
+            <option value="select" class="grade">A</option>
+            <option value="select" class="grade">B</option>
+            <option value="select" class="grade">C</option>
+            <option value="select" class="grade">D</option>
+            <option value="select" class="grade">E</option>
+            <option value="select" class="grade">P</option>
+            <option value="select" class="grade">F</option>
+          </select>
+        </form>
+      </div>
+
+      <div class="">
+        <button class="hii" id="add-course" onclick="addnewcourse()">
+          Add Course
+        </button>
+        <button class="hi" id="remove-course" onclick="removeForms()">
+          remove Course
+        </button>
+        <button class="hiii" id="calculate" onclick="gpacalc()">
+          calculate SGPA
+        </button>
+      </div>
+      <div class="result-div">
+        <p id="result">Your Sgpa is :-</p>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+* {
+    margin : 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: wheat;
+  color: white;
+}
+
+#course-code{
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#course-unit{
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#course-grade{
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.course-div{
+    width:75%;
+    height:auto;
+    border: 2px solid white;
+    margin: 100px auto;
+}
+
+h1{
+    text-align: center;
+}
+
+.headder{
+    text-align: center;
+    background-color: red;
+}
+
+h2{
+    padding:20px;
+    font-size: 1rem;
+    color: gray;
+    text-align: center;
+}
+
+.course-div,form{
+    color: brown;
+    padding-left: 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+input{
+    border:none;
+    padding:15px;
+    margin:10px;
+    border-radius: 5px;
+    width: 20%;
+    text-align: center;
+}
+
+select{
+    padding:15px;
+    border:none;
+    border-radius: 7.5px;
+    width:20%;
+}
+
+button{
+    width:15%;
+    height:40px;
+    padding:1px;
+    margin: 5px auto;
+    border-width: 3px;
+    border-radius: 10%;
+    border-style: solid;
+}
+
+#add-course{
+    background-color: blue;
+}
+#remove-course{
+    background-color: red;
+}
+#calculate{
+    background-color: green;
+}
+
+.result-div{
+    border:1px solid grey;
+    background-color: grey;
+}
+#result{
+    color:white;
+    text-align: center;
+    padding:10px;
+}
+#result:hover{
+    background-color: red;
+}
