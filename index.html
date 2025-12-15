@@ -1,64 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="main.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>CGPA CALCULATOR</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGPA & CGPA Calculator</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="toggle-buttons">
+            <button id="show-sgpa" class="active">SGPA Calculator</button>
+            <button id="show-cgpa">CGPA Calculator</button>
+        </div>
 
-    <div class="course-div">
-      <h2 class="headder">Calculate your own sgpa&cgpa..</h2>
-      <h2>
-        <label for="course" id="course-code">Course Name:- </label>
-        <label for="course-credits" id="course-unit">Course credits:- </label>
-        <label for="course-grade" id="course-grade">Course grade:- </label>
-      </h2>
-      <div class="course-div1">
-        <form class="get-0">
-          <input
-            type="text"
-            placeholder="Enter course Name"
-            class="course"
-            required
-          />
-          <input
-            type="int"
-            placeholder="Enter course Credits"
-            class="course-credits"
-            required
-          />
-          <select class="grade get" required>
-            <option value="select" class="grade">Select</option>
-            <option value="select" class="grade">S</option>
-            <option value="select" class="grade">A</option>
-            <option value="select" class="grade">B</option>
-            <option value="select" class="grade">C</option>
-            <option value="select" class="grade">D</option>
-            <option value="select" class="grade">E</option>
-            <option value="select" class="grade">P</option>
-            <option value="select" class="grade">F</option>
-          </select>
-        </form>
-      </div>
+        <!-- SGPA Calculator -->
+        <div id="sgpa-calculator">
+            <h1>SGPA Calculator</h1>
+            <p class="description">Calculate your SGPA with ease.</p>
 
-      <div class="">
-        <button class="hii" id="add-course" onclick="addnewcourse()">
-          Add Course
-        </button>
-        <button class="hi" id="remove-course" onclick="removeForms()">
-          remove Course
-        </button>
-        <button class="hiii" id="calculate" onclick="gpacalc()">
-          calculate SGPA
-        </button>
-      </div>
-      <div class="result-div">
-        <p id="result">Your Sgpa is :-</p>
-      </div>
+            <div id="course-list">
+                <div class="course-item">
+                    <input type="text" class="course-name" placeholder="Course Name (e.g., CS101)">
+                    <input type="number" class="course-credits" placeholder="Credits">
+                    <select class="course-grade" title="Select Grade">
+                        <option value="">Grade</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="4">P</option>
+                        <option value="0">F</option>
+                    </select>
+                    <button class="remove-course" onclick="removeCourse(this)">Remove</button>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button id="add-course">Add Course</button>
+                <button id="calculate-sgpa">Calculate SGPA</button>
+                <button id="clear-sgpa">Clear</button>
+            </div>
+
+            <div id="sgpa-result" class="result">
+                <h2>Your SGPA is: <span id="sgpa-value">0.00</span></h2>
+            </div>
+        </div>
+
+        <!-- CGPA Calculator -->
+        <div id="cgpa-calculator" style="display: none;">
+            <h1>CGPA Calculator</h1>
+            <p class="description">Calculate your CGPA by entering the SGPA and total credits for each semester.</p>
+
+            <div id="semester-list">
+                <div class="semester-item">
+                    <input type="number" class="semester-sgpa" placeholder="Semester SGPA">
+                    <input type="number" class="semester-credits" placeholder="Total Semester Credits">
+                    <button class="remove-semester" onclick="removeSemester(this)">Remove</button>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button id="add-semester">Add Semester</button>
+                <button id="calculate-cgpa">Calculate CGPA</button>
+                <button id="clear-cgpa">Clear</button>
+            </div>
+
+            <div id="cgpa-result" class="result">
+                <h2>Your CGPA is: <span id="cgpa-value">0.00</span></h2>
+            </div>
+        </div>
     </div>
+
+    <footer>
+        <p>&copy; 2025 SgCalculator. All rights reserved.</p>
+    </footer>
+
     <script src="main.js"></script>
-  </body>
+</body>
 </html>
